@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Proxima-Nova";
+    font-weight: bold;
+    src: url("../fonts/proxima-nova-9.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Avenir";
+    font-weight: lighter;
+    src: url("../fonts/AvenirLTStd-Light.otf") format("opentype");
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
