@@ -12,6 +12,18 @@ module.exports = {
     },
 
     extend: {
+      keyframes: {
+        slideOut: {
+          "0%": { transform: "translateX(-100%)" },
+        },
+        slideIn: {
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        slideOut: "slideOut 0.6s ease-in-out forwards",
+        slideIn: "slideIn 0.6s ease-in-out forwards",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
