@@ -28,15 +28,15 @@ export function VerticalNav() {
 
   const projects = [
     //Professional Projects:
-    { title: "Professional", type: "Subheader" },
+    { title: "Professional", type: "Subheader", padding: "Normal" },
     { title: "Royal Crackers", type: "Professional" },
     { title: "Teenage Euthanasia", type: "Professional" },
     { title: "Toonami", type: "Professional" },
 
     //Personal Projects:
-    { title: "Personal", type: "Subheader" },
-    { title: "Ascension of Elements", type: "Personal" },
+    { title: "Personal", type: "Subheader", padding: "Extra" },
     { title: "Parallels at Hand", type: "Personal" },
+    { title: "Ascension of Elements", type: "Personal" },
   ];
 
   return (
@@ -45,25 +45,27 @@ export function VerticalNav() {
         type="image"
         src={"/pbutton.png"}
         onClick={changeActive}
-        className="text-3xl fixed z-10 text-black left-10 top-5 h-10 w-auto"
+        className="text-3xl z-10 text-black left-10 top-5 h-10 w-auto ml-10 mt-10"
       ></input>
 
+      {/* px-10 used on input button and first div to space div text and button evenly. */}
       <div
-        className={`bg-white h-screen w-1/4 min-w-fit fixed text-black flex px-10 shadow-xl space-y-1 z-5
+        className={`bg-white h-screen w-1/4 min-w-fit fixed text-black flex pl-28 shadow-xl space-y-1 z-5
           ${active ? "animate-slideIn" : "animate-slideOut"}`}
       >
-        <div className="flex flex-col flex-shrink-1 pt-12">
-          <div className="h-16"></div>
+        <div className="flex flex-col flex-shrink-1 pt-32 gap-6">
+          {/* p-28 comes from: 16 for the button, + an extra 16. */}
+
           <NavHeader title="DISCIPLINES" contentArray={disciplines} />
           <NavHeader title="PROJECTS" contentArray={projects} />
           <Link
             href="/About"
-            className="text-xl text-black my-4 font-regular hover:text-EmmaHlPurple"
+            className="text-lg text-black pt-2 font-regular hover:text-EmmaHlPurple"
           >
             About
           </Link>
           <SocialButtons />
-          <p className="text-base text-gray-400 my-4 font-regular">
+          <p className="text-base text-black  font-titled">
             © Emma Sawyer 2024
           </p>
         </div>
@@ -75,15 +77,17 @@ export function VerticalNav() {
 function NavHeader({ title, contentArray }) {
   // console.log(contentArray);
   return (
-    <ul className="gap-5 mt-5">
-      <h1 className="text-EmmaPurple hover:text-EmmaLBlue mb-6 text-3xl font-titled">
+    <div className="gap-6 flex flex-col">
+      <h1 className="text-EmmaPurple hover:text-EmmaLBlue text-4xl font-titled">
         {title}
       </h1>
-      {contentArray.map((e) => {
-        // console.log(e);
-        return <NavElement content={e} key={e.title} />;
-      })}
-    </ul>
+      <ul className="flex flex-col gap-2">
+        {contentArray.map((e) => {
+          // console.log(e);
+          return <NavElement content={e} key={e.title} />;
+        })}
+      </ul>
+    </div>
   );
 }
 
@@ -96,13 +100,17 @@ function NavElement({ content }) {
   return (
     <>
       {content.type === "Subheader" ? (
-        <h2 className="text-2xl text-gray-400 my-3 font-titled">
+        <h2
+          className={`text-2xl text-gray-400 font-titled pb-2 ${
+            content.padding === "Extra" && "pt-6"
+          }`}
+        >
           {content.title}
         </h2>
       ) : (
         <li
           key={content.title}
-          className="text-lg text-black pb-1.5 font-regular hover:text-EmmaHlPurple"
+          className="text-xl text-black font-regular hover:text-EmmaHlPurple"
         >
           <Link href={getContentLink(content)}>{content.title}</Link>
         </li>
