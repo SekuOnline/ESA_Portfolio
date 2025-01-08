@@ -5,17 +5,17 @@ import { SoloWideImg, DuoImg } from "./components/imageformatting";
 export default function Home() {
   return (
     <div className="overflow-x-hidden flex w-screen h-screen">
-      <VerticalNav />
+      {/* <VerticalNav /> */}
       <HorizontalNav />
-      <div className="w-screen h-fit mt-[12.5%] pb-12 ml-[25%] mr-[5%] flex items-center flex-col gap-y-4">
+      <div className="w-screen h-fit mt-[9%] pb-12 ml-[15%] mr-[15%] flex items-center flex-col gap-y-6">
         <SoloWideImg
           src="/AOE_BG_ART/Gazebo-Lattice-Ceiling-Final2.jpg"
           alt="Gazebo-Background"
         />
         <DuoImg
-          srcOne="/AOE_CHAR_Art/Varsyllus_Shepard_Daughter.jpg"
+          srcOne="/AOE_CHAR_Art/Varsyllus_Shepard_Daughter.png"
           altOne="Varsyllus_Shepard_Daughter"
-          srcTwo="/AOE_CHAR_Art/Light_Mage_Spell_CC1.jpg"
+          srcTwo="/AOE_CHAR_Art/Light_Mage_Spell_CC1.png"
           altTwo="Light_Mage_Spell_CC1"
         />
         <SoloWideImg
@@ -25,7 +25,7 @@ export default function Home() {
         <DuoImg
           srcOne="\AOE_CHAR_Art\Dutchess_Outside_CC.png"
           altOne="Dutchess_Outsid"
-          srcTwo="\AOE_CHAR_Art\Valkirian Queen.jpg"
+          srcTwo="\AOE_CHAR_Art\Valkirian Queen.png"
           altTwo="Valkirian Queen"
         />
         <SoloWideImg src="\BG_Art\Bake_Shop.jpg" alt="Bake Shop" />

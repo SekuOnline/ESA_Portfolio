@@ -131,9 +131,9 @@ function NavElement({ content }) {
 export function HorizontalNav() {
   return (
     <>
-      <div className="w-4/5 h-[11%] gap-x-16 bg-white text-black ml-[20%] flex font-titled absolute ">
+      <div className="w-screen h-[11%] gap-x-16 bg-white text-black  flex font-titled absolute ">
         {/* <h1 className="pl-[10%] w-fit text-5xl">Emma Sawyer</h1> */}
-        <div className="w-full h-full flex justify-around">
+        <div className="w-full h-full flex justify-center gap-x-20">
           <img
             alt="Emma Sawer Title Text"
             src="/EmmaNameLogo.svg"
@@ -149,30 +149,41 @@ export function HorizontalNav() {
 function SocialButtons() {
   return (
     <div className="flex gap-x-4 flex-shrink-1 items-center">
-      <input
-        type="image"
-        src="/SOCIAL_ICONS/Cara_Icon.png"
-        alt="Cara"
+      <a href="https://cara.app/emmasawyerart" className="w-8 h-8">
+        <input
+          type="image"
+          src="/SOCIAL_ICONS/Cara.png"
+          alt="Cara"
+          className="w-8 h-8"
+        ></input>
+      </a>
+      <a href="https://www.linkedin.com/in/emma-v-sawyer/" className="w-8 h-8">
+        <input
+          type="image"
+          src="/SOCIAL_ICONS/LinkedIn.png"
+          alt="LinkedIn"
+          className="w-8 h-8"
+        ></input>
+      </a>
+      <a href="https://www.instagram.com/emmasawyerart/" className="w-8 h-8">
+        <input
+          type="image"
+          src="/SOCIAL_ICONS/Instagram.png"
+          alt="Instagram"
+          className="w-8 h-8"
+        ></input>
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UCtlkct7hX-HFnN7j07AVLUw"
         className="w-8 h-8"
-      ></input>
-      <input
-        type="image"
-        src="/SOCIAL_ICONS/LinkedIn_Icon.png"
-        alt="LinkedIn"
-        className="w-8 h-8"
-      ></input>
-      <input
-        type="image"
-        src="/SOCIAL_ICONS/Instagram_Icon.png"
-        alt="Instagram"
-        className="w-8 h-8"
-      ></input>
-      <input
-        type="image"
-        src="/SOCIAL_ICONS/Youtube_Icon.png"
-        alt="Youtube"
-        className="w-8 h-8"
-      ></input>
+      >
+        <input
+          type="image"
+          src="/SOCIAL_ICONS/Youtube.png"
+          alt="Youtube"
+          className="w-8 h-8"
+        ></input>
+      </a>
     </div>
   );
 }
