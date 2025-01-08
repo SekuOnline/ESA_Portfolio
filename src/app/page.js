@@ -1,5 +1,6 @@
 "use client";
 import { VerticalNav, HorizontalNav } from "./components/verticalnav";
+import { SoloWideImg, DuoImg } from "./components/imageformatting";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
           srcTwo="\AOE_CHAR_Art\Valkirian Queen.jpg"
           altTwo="Valkirian Queen"
         />
-        <SoloWideImg src="\BG Art\Bake Shop.jpg" alt="Bake Shop" />
+        <SoloWideImg src="\BG_Art\Bake_Shop.jpg" alt="Bake Shop" />
         <DuoImg
           srcOne="\AOE_CHAR_Art\Alena_Regurgitate.png"
           altOne="Alena_Regurgitate"
@@ -40,38 +41,38 @@ export default function Home() {
   );
 }
 
-function SoloWideImg({ src, alt }) {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className="w-11/12"
-      onContextMenu={(e) => {
-        e.preventDefault();
-      }}
-    ></img>
-  );
-}
+// function SoloWideImg({ src, alt }) {
+//   return (
+//     <img
+//       src={src}
+//       alt={alt}
+//       className="w-11/12"
+//       onContextMenu={(e) => {
+//         e.preventDefault();
+//       }}
+//     ></img>
+//   );
+// }
 
-function DuoImg({ srcOne, altOne, srcTwo, altTwo }) {
-  return (
-    <div className="w-11/12 h-fit flex justify-between">
-      <img
-        src={srcOne}
-        alt={altOne}
-        className="w-1/2"
-        onContextMenu={(e) => {
-          e.preventDefault();
-        }}
-      ></img>
-      <img
-        src={srcTwo}
-        alt={altTwo}
-        className="w-1/2"
-        onContextMenu={(e) => {
-          e.preventDefault();
-        }}
-      ></img>
-    </div>
-  );
-}
+// function DuoImg({ srcOne, altOne, srcTwo, altTwo }) {
+//   return (
+//     <div className="w-11/12 h-fit flex justify-between">
+//       <img
+//         src={srcOne}
+//         alt={altOne}
+//         className="w-1/2 pr-3"
+//         onContextMenu={(e) => {
+//           e.preventDefault();
+//         }}
+//       ></img>
+//       <img
+//         src={srcTwo}
+//         alt={altTwo}
+//         className="w-1/2 pl-3"
+//         onContextMenu={(e) => {
+//           e.preventDefault();
+//         }}
+//       ></img>
+//     </div>
+//   );
+// }

@@ -1,23 +1,25 @@
 "use client";
 // import {useRouter} from 'next/router'
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 // export default VerticalNav;
 
 //Arrays containing the sub-sections of the vertical navbar and their respective links/slugs
 
 export function VerticalNav() {
-  const [active, setActive] = React.useState();
+  const [active, setActive] = useState(false);
 
-  function changeActive() {
-    console.log("Active = " + active);
-    if (active != true) {
-      setActive(true);
-      return;
-    }
-    setActive(false);
-  }
+  // function changeActive() {
+
+  //     console.log("Active = " + active);
+  //     if (active == false) {
+  //       setActive(true);
+  //       return;
+  //     }
+  //     setActive(false);
+
+  // }
 
   const disciplines = [
     { title: "Background Design" },
@@ -43,14 +45,21 @@ export function VerticalNav() {
     <>
       <input
         type="image"
-        src={"/pbutton.png"}
-        onClick={changeActive}
-        className="text-3xl z-10 text-black left-10 top-5 h-10 w-auto ml-10 mt-10"
+        src={active ? "/hamburgerButton.png" : "/closeButton.png"}
+        onClick={() => {
+          console.log("Active = " + active);
+          if (active == false) {
+            setActive(true);
+            return;
+          }
+          setActive(false);
+        }}
+        className="text-3xl z-10 text-black left-5 top-5 h-10 w-auto absolute"
       ></input>
 
       {/* px-10 used on input button and first div to space div text and button evenly. */}
       <div
-        className={`bg-white h-screen w-1/4 min-w-fit fixed text-black flex pl-28 shadow-xl space-y-1 z-5
+        className={`bg-white h-screen w-1/5 min-w-fit fixed text-black flex pl-20 shadow-xl space-y-1 z-5
           ${active ? "animate-slideIn" : "animate-slideOut"}`}
       >
         <div className="flex flex-col flex-shrink-1 pt-32 gap-6">
@@ -60,12 +69,12 @@ export function VerticalNav() {
           <NavHeader title="PROJECTS" contentArray={projects} />
           <Link
             href="/About"
-            className="text-lg text-black pt-2 font-regular hover:text-EmmaHlPurple"
+            className="text-lg text-black pt-4 font-regular hover:text-EmmaHlPurple"
           >
             About
           </Link>
           <SocialButtons />
-          <p className="text-base text-black  font-titled">
+          <p className="text-base text-gray-500  font-regular">
             © Emma Sawyer 2024
           </p>
         </div>
@@ -81,7 +90,7 @@ function NavHeader({ title, contentArray }) {
       <h1 className="text-EmmaPurple hover:text-EmmaLBlue text-4xl font-titled">
         {title}
       </h1>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-1">
         {contentArray.map((e) => {
           // console.log(e);
           return <NavElement content={e} key={e.title} />;
@@ -110,7 +119,7 @@ function NavElement({ content }) {
       ) : (
         <li
           key={content.title}
-          className="text-xl text-black font-regular hover:text-EmmaHlPurple"
+          className="text-lg text-black font-regular hover:text-EmmaHlPurple"
         >
           <Link href={getContentLink(content)}>{content.title}</Link>
         </li>
