@@ -9,7 +9,7 @@ export default function Home() {
       <HorizontalNav />
       <div className="w-screen h-fit mt-[9%] pb-12 ml-[15%] mr-[15%] flex items-center flex-col gap-y-6">
         <SoloWideImg
-          src="/AOE_BG_ART/Gazebo-Lattice-Ceiling-Final2.jpg"
+          src="/AOE_BG_ART/Gazebo-Lattice.jpg"
           alt="Gazebo-Background"
         />
         <DuoImg
