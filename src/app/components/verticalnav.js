@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import linkedin from "../../../public/SOCIAL_ICONS/Linkedin.png";
 import cara from "../../../public/SOCIAL_ICONS/Cara.png";
-import youtube from "../../../public/SOCIAL_ICONS/Youtube.png";
+import youtube from "../../../public/SOCIAL_ICONS/YouTube.png";
 import instagram from "../../../public/SOCIAL_ICONS/Instagram.png";
 
 //prod deploy
