@@ -29,9 +29,9 @@ export function VerticalNav() {
   // }
 
   const disciplines = [
-    { title: "Background Design" },
-    { title: "Prop Design" },
-    { title: "Character Design" },
+    // { title: "Background Design" },
+    // { title: "Prop Design" },
+    // { title: "Character Design" },
     { title: "Animation" },
   ];
 
@@ -40,12 +40,12 @@ export function VerticalNav() {
     { title: "Professional", type: "Subheader", padding: "Normal" },
     { title: "Royal Crackers", type: "Professional" },
     { title: "Teenage Euthanasia", type: "Professional" },
-    { title: "Toonami", type: "Professional" },
+    // { title: "Toonami", type: "Professional" },
 
     //Personal Projects:
-    { title: "Personal", type: "Subheader", padding: "Extra" },
-    { title: "Parallels at Hand", type: "Personal" },
-    { title: "Ascension of Elements", type: "Personal" },
+    // { title: "Personal", type: "Subheader", padding: "Extra" },
+    // { title: "Parallels at Hand", type: "Personal" },
+    // { title: "Ascension of Elements", type: "Personal" },
   ];
 
   return (

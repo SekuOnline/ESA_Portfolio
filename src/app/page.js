@@ -19,9 +19,9 @@ import valk_bg from "../../public/AOE_BG_Art/Valkirian_City.jpg";
 export default function Home() {
   return (
     <div className="overflow-x-hidden flex w-screen h-screen">
-      {/* <VerticalNav /> */}
+      <VerticalNav />
       <HorizontalNav />
-      <div className="w-screen h-fit mt-[9%] pb-12 ml-[15%] mr-[15%] flex items-center flex-col gap-y-6">
+      <div className="w-screen h-fit mt-[9%] pb-12 ml-[25%] mr-[5%] flex items-center flex-col gap-y-6">
         <SoloWideImage src={gazebo} alt="Gazebo-Background" />
         <SoloWideImage src={sapyre} alt="Sapyre Smoking in Lava Pit" />
         <SoloWideImage src={kellyn} alt="Kellyn" />
