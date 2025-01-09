@@ -1,50 +1,52 @@
-export function SoloWideImg({ src, alt }) {
+import Image from "next/image";
+
+export function SoloWideImage({ src, alt }) {
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
       className="w-11/12"
       onContextMenu={(e) => {
         e.preventDefault();
       }}
-    ></img>
+    ></Image>
   );
 }
 
-export function DuoImg({ srcOne, altOne, srcTwo, altTwo }) {
+export function DuoImage({ srcOne, altOne, srcTwo, altTwo }) {
   return (
     <div className="w-11/12 h-fit flex justify-between">
-      <img
+      <Image
         src={srcOne}
         alt={altOne}
         className="w-1/2 pr-3"
         onContextMenu={(e) => {
           e.preventDefault();
         }}
-      ></img>
-      <img
+      ></Image>
+      <Image
         src={srcTwo}
         alt={altTwo}
         className="w-1/2 pl-3"
         onContextMenu={(e) => {
           e.preventDefault();
         }}
-      ></img>
+      ></Image>
     </div>
   );
 }
 
-export function TripleImg({ images }) {
+export function TripleImage({ images }) {
   return (
     <div className="w-11/12 h-fit flex justify-between">
       {images.map((e) => {
         return (
-          <img
+          <Image
             src={e.src}
             alt={e.alt}
             key={e.alt}
             className="w-1/3 h-auto"
-          ></img>
+          ></Image>
         );
       })}
     </div>
