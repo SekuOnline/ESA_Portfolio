@@ -3,6 +3,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
+
+import linkedin from "../../../public/SOCIAL_ICONS/Linkedin.png";
+import cara from "../../../public/SOCIAL_ICONS/Cara.png";
+import youtube from "../../../public/SOCIAL_ICONS/Youtube.png";
+import instagram from "../../../public/SOCIAL_ICONS/Instagram.png";
+
 //prod deploy
 // export default VerticalNav;
 
@@ -147,39 +153,19 @@ function SocialButtons() {
   return (
     <div className="flex gap-x-4 flex-shrink-1 items-center">
       <a href="https://cara.app/emmasawyerart" className="w-8 h-8">
-        <input
-          type="image"
-          src="/SOCIAL_ICONS/Cara.png"
-          alt="Cara"
-          className="w-8 h-8"
-        ></input>
+        <Image src={cara} alt="cara" />
       </a>
       <a href="https://www.linkedin.com/in/emma-v-sawyer/" className="w-8 h-8">
-        <input
-          type="image"
-          src="/SOCIAL_ICONS/LinkedIn.png"
-          alt="LinkedIn"
-          className="w-8 h-8"
-        ></input>
+        <Image src={linkedin} alt="linkedin" />
       </a>
       <a href="https://www.instagram.com/emmasawyerart/" className="w-8 h-8">
-        <input
-          type="image"
-          src="/SOCIAL_ICONS/Instagram.png"
-          alt="Instagram"
-          className="w-8 h-8"
-        ></input>
+        <Image src={instagram} alt="instagram" />
       </a>
       <a
         href="https://www.youtube.com/channel/UCtlkct7hX-HFnN7j07AVLUw"
         className="w-8 h-8"
       >
-        <input
-          type="image"
-          src="/SOCIAL_ICONS/Youtube.png"
-          alt="Youtube"
-          className="w-8 h-8"
-        ></input>
+        <Image src={youtube} alt="youtube" />
       </a>
     </div>
   );
