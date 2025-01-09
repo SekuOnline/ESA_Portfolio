@@ -9,8 +9,12 @@ import dutchess from "../../public/AOE_CHAR_Art/Dutchess_Outside.png";
 import queen from "../../public/AOE_CHAR_Art/Valkirian_Queen.png";
 import bakeshop from "../../public/BG_Art/Bake_Shop.jpg";
 import alina from "../../public/AOE_CHAR_Art/Alena_Regurgitate.png";
-import darius from "../../public/AOE_CHAR_ART/Darius_Portrait.png";
+import darius from "../../public/AOE_CHAR_Art/Darius_Portrait.png";
 import merlina from "../../public/AOE_CHAR_Art/Merlina.png";
+import kellyn from "../../public/AOE_CHAR_Art/Kellyn.png";
+import sapyre from "../../public/AOE_CHAR_Art/Sapyre_Smoking.png";
+import kellyn_night from "../../public/AOE_CHAR_Art/Kellyn_at_Night.png";
+import valk_bg from "../../public/AOE_BG_Art/Valkirian_City.jpg";
 
 export default function Home() {
   return (
@@ -19,6 +23,10 @@ export default function Home() {
       <HorizontalNav />
       <div className="w-screen h-fit mt-[9%] pb-12 ml-[15%] mr-[15%] flex items-center flex-col gap-y-6">
         <SoloWideImage src={gazebo} alt="Gazebo-Background" />
+        <SoloWideImage src={sapyre} alt="Sapyre Smoking in Lava Pit" />
+        <SoloWideImage src={kellyn} alt="Kellyn" />
+        <SoloWideImage src={kellyn_night} alt="Kellyn at Night" />
+        <SoloWideImage src={valk_bg} alt="Valkirian City" />
         <DuoImage
           srcOne={varsyllus}
           altOne="Varsyllus_Shepard_Daughter"
