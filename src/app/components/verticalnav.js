@@ -140,7 +140,7 @@ export function HorizontalNav() {
     <>
       <div className="w-screen h-[11%] gap-x-16 bg-white text-black  flex font-titled absolute ">
         {/* <h1 className="pl-[10%] w-fit text-5xl">Emma Sawyer</h1> */}
-        <div className="w-full h-full flex justify-center gap-x-20">
+        <div className="w-full h-full ml-[20%] pl-[5%] pr-[5%] flex justify-between">
           <Link href="/" passHref legacyBehavior>
             <img alt="Emma Sawer Title Text" src="/EmmaNameLogo.svg"></img>
           </Link>
