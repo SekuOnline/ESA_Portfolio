@@ -60,3 +60,46 @@ export function TripleImage({ images }) {
     </div>
   );
 }
+
+export function GalleryImage({ srcOne, altOne }) {
+  return (
+    <div className="w-full flex flex-row">
+      {/* <div className="w-1/3 hover:bg-gradient-to-bl">
+    //     <Image
+    //       src={srcOne}
+    //       alt={altOne}
+    //       style={{
+    //         objectFit: "cover",
+    //       }}
+    //     />
+    //   </div> */}
+      <div
+        className="w-1/3 h-80 bg-center bg-cover"
+        style={{
+          // width: "500px",
+          // height: "500px",
+          backgroundImage: `url(/One.png)`,
+          backgroundSize: "",
+        }}
+      ></div>
+      <div
+        className="w-1/3 h-80 bg-center bg-cover"
+        style={{
+          // width: "500px",
+          // height: "500px",
+          backgroundImage: `url(${srcOne})`,
+          backgroundSize: "",
+        }}
+      ></div>
+      {/* <div
+        className="w-1/3 h-80 bg-center bg-cover"
+        style={{
+          // width: "500px",
+          // height: "500px",
+          backgroundImage: `url(${srcOne})`,
+          backgroundSize: "",
+        }}
+      ></div> */}
+    </div>
+  );
+}

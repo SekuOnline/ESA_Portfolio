@@ -1,6 +1,7 @@
 import { VerticalNav, HorizontalNav } from "../components/verticalnav";
 import { SoloWideImage, DuoImage } from "../components/imageformatting";
 
+import one from "../Royal_Crackers/One.png";
 export default function Home() {
   return (
     <div className="overflow-x-hidden flex w-screen h-screen">
