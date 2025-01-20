@@ -155,17 +155,30 @@ export function HorizontalNav() {
 function SocialButtons() {
   return (
     <div className="flex gap-x-4 flex-shrink-1 items-center">
-      <a href="https://cara.app/emmasawyerart" className="w-8 h-8">
+      <a
+        href="https://cara.app/emmasawyerart"
+        target="_blank"
+        className="w-8 h-8"
+      >
         <Image src={cara} alt="cara" />
       </a>
-      <a href="https://www.linkedin.com/in/emma-v-sawyer/" className="w-8 h-8">
+      <a
+        href="https://www.linkedin.com/in/emma-v-sawyer/"
+        target="_blank"
+        className="w-8 h-8"
+      >
         <Image src={linkedin} alt="linkedin" />
       </a>
-      <a href="https://www.instagram.com/emmasawyerart/" className="w-8 h-8">
+      <a
+        href="https://www.instagram.com/emmasawyerart/"
+        target="_blank"
+        className="w-8 h-8"
+      >
         <Image src={instagram} alt="instagram" />
       </a>
       <a
         href="https://www.youtube.com/channel/UCtlkct7hX-HFnN7j07AVLUw"
+        target="_blank"
         className="w-8 h-8"
       >
         <Image src={youtube} alt="youtube" />

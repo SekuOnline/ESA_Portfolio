@@ -30,10 +30,10 @@ export default function Home() {
           className="w-full aspect-video"
           src="https://www.youtube.com/embed/VTm5nRXmZHA?si=mvef92XNKbcud8_a"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
         {/* <h2 className="self-start text-2xl font-titled pt-8 text-gray-800">
           Compositing & Shot Finaling Reel
