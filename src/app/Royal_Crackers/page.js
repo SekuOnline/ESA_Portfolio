@@ -1,12 +1,6 @@
 "use client";
 import { VerticalNav, HorizontalNav } from "../components/verticalnav";
 import { ImageGallery } from "react-image-grid-gallery";
-import {
-  SoloWideImage,
-  DuoImage,
-  GalleryImage,
-} from "../components/imageformatting";
-import one from "./One.png";
 
 const imagesArray = [
   {
@@ -68,10 +62,10 @@ const imagesArray = [
 const custStyle = {
   opacity: 0,
   fontSize: "0.85rem",
-  transition: "opacity 1s ease-in-out",
+  transition: "opacity 0.25s ease-in-out",
   position: "absolute",
   bottom: "0px",
-  zIndex: 1000,
+  zIndex: 1,
   width: "100%",
   background: "linear-gradient(rgba(25, 27, 38, 0), rgb(25, 27, 38))",
   padding: "16px",
