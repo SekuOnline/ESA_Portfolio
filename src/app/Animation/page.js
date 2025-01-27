@@ -7,8 +7,8 @@ export default function Home() {
     <div className="overflow-x-hidden flex w-screen h-screen">
       <VerticalNav />
       <HorizontalNav />
-      <div className="w-screen h-fit mt-[9%] pb-12 ml-[25%] mr-[5%] flex items-center flex-col gap-y-6">
-        <h1 className="text-5xl font-regular">Animation</h1>
+      <div className="w-screen h-fit pt-[9%] pb-12 ml-[30%] mr-[10%] flex  flex-col gap-y-4">
+        <h1 className="text-4xl font-titled">Animation</h1>
         <p className="font-regular w-4/5 pt-8">
           “Animation has always offered a myriad of inspirational possibilities
           for me. My mission is to showcase and further the inherent depth of

@@ -28,8 +28,8 @@ const propDesignArrayOne = [
   },
   {
     id: "PD4",
-    alt: "Prop Design - Double Munch Granola and Oats",
-    caption: "Double Munch Granola and Oats",
+    alt: "Prop Design - Parallels at Hand Props - Every Day Items",
+    caption: "Parallels at Hand Props - Every Day Items",
     src: "/Prop_Design/Parallels at Hand Props - Every Day Items.webp",
   },
   {
@@ -137,22 +137,31 @@ export default function Home() {
       <VerticalNav />
       <HorizontalNav />
 
-      <div className="w-screen h-fit mt-[12.5%] pb-12 ml-[25%] mr-[5%] flex items-center flex-col gap-y-4">
-        <h1 className="text-2xl font-titled">Prop Design</h1>
+      <div className="w-screen h-fit pt-[9%] pb-12 ml-[25%] mr-[5%] flex  flex-col gap-y-4">
+        <h1 className="text-4xl font-titled">Prop Design</h1>
         <ImageGallery
           imagesInfoArray={propDesignArrayOne}
           columnCount={2}
           columnWidth={230}
           gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
+          customStyles={{
+            imageCaptionStyle: custStyle,
+            // imageContainerStyle: {
+            //   width: "200px",
+            //   height: "auto",
+            //   objectFit: "cover",
+            // },
+          }}
         />
-        <ImageGallery
-          imagesInfoArray={propDesignArrayTwo}
-          columnCount={1}
-          columnWidth={230}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
+        <div className="w-fit h-fit px-[7.5%]">
+          <ImageGallery
+            imagesInfoArray={propDesignArrayTwo}
+            columnCount={1}
+            columnWidth={230}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+        </div>
       </div>
     </div>
   );
