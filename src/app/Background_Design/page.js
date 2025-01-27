@@ -55,9 +55,9 @@ const backgroundDesignArrayThree = [
 const backgroundDesignArrayFour = [
   {
     id: "BG7",
-    alt: "Background Design - Alteria Establishing Shot",
-    caption: "Alteria Establishing Shot",
-    src: "/bg_art/Alteria Establishing Shot.jpg",
+    alt: "Valkirian City",
+    caption: "Valkirian City",
+    src: "/bg_art/Valkirian_City.png",
   },
   {
     id: "BG8",
@@ -81,7 +81,7 @@ const backgroundDesignArrayFour = [
     id: "BG11",
     alt: "Background Design - Kyrie's Dark Palace",
     caption: "Kyrie's Dark Palace",
-    src: "/bg_art/Kyrie's Dark Palace.webp",
+    src: "/bg_art/Kyrie_Palace.png",
   },
   {
     id: "BG12",
@@ -113,7 +113,7 @@ export default function Home() {
       <VerticalNav />
       <HorizontalNav />
 
-      <div className="w-screen h-fit pt-[9%] pb-12 ml-[30%] mr-[10%] flex  flex-col gap-y-4">
+      <div className="w-screen h-fit pt-[9%] pb-12 ml-[30%] mr-[10%] flex  flex-col ">
         <h1 className="text-4xl font-titled pb-4">Background Design</h1>
         <ImageGallery
           imagesInfoArray={backgroundDesignArrayOne}
@@ -122,22 +122,23 @@ export default function Home() {
           gapSize={8}
           customStyles={{ imageCaptionStyle: custStyle }}
         />
-        {/* <ImageGallery
-          imagesInfoArray={backgroundDesignArrayTwo}
-          columnCount={2}
-          columnWidth={100}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        /> */}
-        <div className="flex w-full gap-2">
-          {/* <img src="/bg_art/Stairwell 1.webp" className="w-1/2 shrink" />
-          <img src="/bg_art/Stairwell 2.webp" className="w-1/2 shrink" /> */}
+
+        <div className="flex w-full gap-4">
           <ImageGallery
             imagesInfoArray={backgroundDesignArrayTwo}
             columnCount={1}
             columnWidth={150}
             gapSize={0}
-            customStyles={{ imageCaptionStyle: custStyle }}
+            customStyles={{
+              imageCaptionStyle: custStyle,
+              galleryContainerStyle: {
+                lineHeight: 2,
+                columns: 1,
+                columnWidth: 230,
+                textAlign: "center",
+                columnGap: 16,
+              },
+            }}
           />
           <ImageGallery
             imagesInfoArray={backgroundDesignArrayThree}

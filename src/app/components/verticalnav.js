@@ -31,7 +31,7 @@ export function VerticalNav() {
   const disciplines = [
     { title: "Background Design" },
     { title: "Prop Design" },
-    // { title: "Character Design" },
+    { title: "Character Design" },
     { title: "Animation" },
   ];
 

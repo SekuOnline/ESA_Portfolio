@@ -1,9 +1,59 @@
 "use client";
+
 import {
   VerticalNav,
   HorizontalNav,
   //   SoloWideImage,
 } from "../components/verticalnav";
+
+import { ImageGallery } from "react-image-grid-gallery";
+
+const custStyle = {
+  opacity: 0,
+  fontSize: "0.85rem",
+  transition: "opacity 0.25s ease-in-out",
+  position: "absolute",
+  bottom: "0px",
+  zIndex: 1,
+  width: "100%",
+  background: "linear-gradient(rgba(25, 27, 38, 0), rgb(25, 27, 38))",
+  padding: "16px",
+  textAlign: "center",
+  color: "rgb(255, 255, 255)",
+  fontFamily: "Avenir",
+  paddingTop: "60px",
+};
+
+const studioGallery = [
+  {
+    id: "AGB",
+    alt: "AGB",
+    src: "/About-Logos/AGB.png",
+  },
+  {
+    id: "LS",
+    alt: "LS",
+    src: "/About-Logos/LS.jpeg",
+  },
+  {
+    id: "studio",
+    alt: "studio",
+    src: "/About-Logos/studio.png",
+  },
+];
+
+const studioGallery2 = [
+  {
+    id: "Titmouse",
+    alt: "Titmouse",
+    src: "/About-Logos/titmouse.png",
+  },
+  {
+    id: "AS",
+    alt: "AS",
+    src: "/About-Logos/AS.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -54,7 +104,7 @@ export default function Home() {
           method="post"
           encType="plain"
         >
-          <div className="flex w-4/5 justify-center gap-4">
+          <div className="flex w-4/5 justify-center gap-4 ">
             <div className="flex flex-col w-1/2">
               <label htmlFor="name" className="text-lg text-purple-500 ">
                 Name *
@@ -95,6 +145,19 @@ export default function Home() {
             ></input>
           </div>
         </form>
+        <div className="flex w-4/5 justify-evenly mt-16">
+          <img src="/About-Logos/AS.jpg" className="w-52"></img>
+          <img src="/About-Logos/Titmouse.png" className="h-24"></img>
+          <img src="/About-Logos/Toonami.png" className="w-2/5"></img>
+        </div>
+        <div className="flex w-4/5 justify-evenly">
+          <img
+            src="/About-Logos/AGB.png"
+            className="/About-Logos/AS.jpg w-32"
+          ></img>
+          <img src="/About-Logos/LS.jpeg" className=" w-32"></img>
+          <img src="/About-Logos/studio.png" className=" w-32"></img>
+        </div>
       </div>
     </div>
   );
