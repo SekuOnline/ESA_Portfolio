@@ -12,25 +12,25 @@ const backgroundDesignArrayOne = [
     id: "BG1",
     alt: "Background Design - Radioactive Forest",
     caption: "Radioactive Forest",
-    src: "/bg_art/Radioactive Forest.webp",
+    src: "/BG_ART/Radioactive Forest.webp",
   },
   // {
   //   id: "BG2",
   //   alt: "Background Design - Radioactive Forest Spiral",
   //   caption: "Radioactive Forest Spiral",
-  //   src: "/bg_art/Radioactive Forest Spiral.webp",
+  //   src: "/BG_ART/Radioactive Forest Spiral.webp",
   // },
   {
     id: "BG3",
     alt: "Background Design - Acorn Boy Bedroom",
     caption: "Acorn Boy Bedroom",
-    src: "/bg_art/Acorn Boy Bedroom.webp",
+    src: "/BG_ART/Acorn Boy Bedroom.webp",
   },
   {
     id: "BG4",
     alt: "Background Design - Bee Family Living Room",
     caption: "Bee Family Living Room",
-    src: "/bg_art/Bee Family Living Room.webp",
+    src: "/BG_ART/Bee Family Living Room.webp",
   },
 ];
 
@@ -39,7 +39,7 @@ const backgroundDesignArrayTwo = [
     id: "BG5",
     alt: "Background Design - Stairwell 1",
     caption: "Stairwell 1",
-    src: "/bg_art/Stairwell 1.webp",
+    src: "/BG_ART/Stairwell 1.webp",
   },
 ];
 
@@ -48,7 +48,7 @@ const backgroundDesignArrayThree = [
     id: "BG6",
     alt: "Background Design - Stairwell 2",
     caption: "Stairwell 2",
-    src: "/bg_art/Stairwell 2.webp",
+    src: "/BG_ART/Stairwell 2.webp",
   },
 ];
 
@@ -57,37 +57,37 @@ const backgroundDesignArrayFour = [
     id: "BG7",
     alt: "Valkirian City",
     caption: "Valkirian City",
-    src: "/bg_art/Valkirian_City.png",
+    src: "/BG_ART/Valkirian_City.png",
   },
   {
     id: "BG8",
     alt: "Background Design - Divis Lautus Walkway",
     caption: "Divis Lautus Walkway",
-    src: "/bg_art/Divis Lautus Walkway.webp",
+    src: "/BG_ART/Divis Lautus Walkway.webp",
   },
   {
     id: "BG9",
     alt: "Background Design - Royal Chambers",
     caption: "Royal Chambers",
-    src: "/bg_art/Royal Chambers.webp",
+    src: "/BG_ART/Royal Chambers.webp",
   },
   {
     id: "BG10",
     alt: "Background Design - Kellyn's Desk",
     caption: "Kellyn's Desk",
-    src: "/bg_art/Kellyn's Desk.webp",
+    src: "/BG_ART/Kellyn's Desk.webp",
   },
   {
     id: "BG11",
     alt: "Background Design - Kyrie's Dark Palace",
     caption: "Kyrie's Dark Palace",
-    src: "/bg_art/Kyrie_Palace.png",
+    src: "/BG_ART/Kyrie_Palace.png",
   },
   {
     id: "BG12",
     alt: "Background Design - Dark Palace Throne Room",
     caption: "Dark Palace Throne Room",
-    src: "/bg_art/Dark Palace Throne Room.webp",
+    src: "/BG_ART/Dark Palace Throne Room.webp",
   },
 ];
 
