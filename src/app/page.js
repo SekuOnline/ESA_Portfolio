@@ -15,7 +15,7 @@ import kellyn from "../../public/AOE_CHAR_Art/Kellyn.png";
 import sapyre from "../../public/AOE_CHAR_Art/Sapyre_Smoking.png";
 import kellyn_night from "../../public/AOE_CHAR_Art/Kellyn_at_Night.png";
 import valk_bg from "../../public/AOE_BG_Art/Valkirian_City.jpg";
-import oacian_palace from "../../public/AOE_BG_Art/oacian_palace.png";
+import oacian_palace from "../../public/AOE_BG_Art/Oacian_Palace.png";
 
 export default function Home() {
   return (
