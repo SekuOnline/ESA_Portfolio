@@ -1,55 +1,255 @@
 "use client";
+import { ImageGallery } from "react-image-grid-gallery";
 import { VerticalNav, HorizontalNav } from "./components/verticalnav";
-import { SoloWideImage, DuoImage } from "./components/imageformatting";
-import gazebo from "../../public/AOE_BG_Art/Gazebo-Lattice.jpg";
-import varsyllus from "../../public/AOE_CHAR_Art/Varsyllus_Shepard_Daughter.png";
-import lightmage from "../../public/AOE_CHAR_Art/Light_Mage_Spell_CC1.png";
-import dl from "../../public/AOE_BG_Art/DL_Figures.jpg";
-import dutchess from "../../public/AOE_CHAR_Art/Dutchess_Outside.png";
-import queen from "../../public/AOE_CHAR_Art/Valkirian_Queen.png";
-import bakeshop from "../../public/BG_Art/Bake_Shop.jpg";
-import alina from "../../public/AOE_CHAR_Art/Alena_Regurgitate.png";
-import darius from "../../public/AOE_CHAR_Art/Darius_Portrait.png";
-import merlina from "../../public/AOE_CHAR_Art/Merlina.png";
-import kellyn from "../../public/AOE_CHAR_Art/Kellyn.png";
-import sapyre from "../../public/AOE_CHAR_Art/Sapyre_Smoking.png";
-import kellyn_night from "../../public/AOE_CHAR_Art/Kellyn_at_Night.png";
-import valk_bg from "../../public/AOE_BG_Art/Valkirian_City.jpg";
-import oacian_palace from "../../public/AOE_BG_Art/Oacian_Palace.png";
+
+const custStyle = {
+  opacity: 0,
+  fontSize: "0.85rem",
+  transition: "opacity 0.25s ease-in-out",
+  position: "absolute",
+  bottom: "0px",
+  zIndex: 1,
+  width: "100%",
+  background: "linear-gradient(rgba(25, 27, 38, 0), rgb(25, 27, 38))",
+  padding: "16px",
+  textAlign: "center",
+  color: "rgb(255, 255, 255)",
+  fontFamily: "Avenir",
+  paddingTop: "60px",
+};
+
+const SoloColumn = [
+  {
+    id: "Gazebo-Background",
+    alt: "Gazebo-Background",
+    caption: "Gazebo Background",
+    src: "/AOE_BG_Art/Gazebo-Lattice.jpg",
+  },
+  {
+    id: "Sapyre-Smoking",
+    alt: "Sapyre-Smoking",
+    caption: "Sapyre Smoking",
+    src: "/AOE_CHAR_Art/Sapyre_Smoking.png",
+  },
+  {
+    id: "Oacian Palace",
+    alt: "Oacian Palace",
+    caption: "Oacian Palace",
+    src: "/AOE_BG_Art/Oacian_Palace.png",
+  },
+  {
+    id: "Kellyn",
+    alt: "Kellyn",
+    caption: "Kellyn",
+    src: "/AOE_CHAR_Art/Kellyn.png",
+  },
+  {
+    id: "Kellyn at Night",
+    alt: "Kellyn at Night",
+    caption: "Kellyn at Night",
+    src: "/AOE_CHAR_Art/Kellyn_at_Night.png",
+  },
+  {
+    id: "Valkirian City",
+    alt: "Valkirian City",
+    caption: "Valkirian City",
+    src: "/AOE_BG_Art/Valkirian_City.jpg",
+  },
+];
+
+const PairAOne = [
+  {
+    id: "Varsyllus Shepherd Father and Daughter",
+    alt: "Varsyllus Shepherd Father and Daughter",
+    caption: "Varsyllus Shepherd Father and Daughter",
+    src: "/AOE_CHAR_Art/Varsyllus_Shepard_Daughter.png",
+  },
+];
+
+const PairATwo = [
+  {
+    id: "Light Mage",
+    alt: "Light Mage",
+    caption: "Dexian Light Mage",
+    src: "/AOE_CHAR_Art/Light_Mage_Spell_CC1.png",
+  },
+];
+
+const PairBOne = [
+  {
+    id: "Dexian Dutchess",
+    alt: "Dexian Dutchess",
+    caption: "Dexian Dutchess",
+    src: "/AOE_CHAR_Art/Dutchess_Outside.png",
+  },
+];
+
+const PairBTwo = [
+  {
+    id: "Valkirian Queen",
+    alt: "Valkirian Queen",
+    caption: "Valkirian Queen",
+    src: "/AOE_CHAR_Art/Valkirian_Queen.png",
+  },
+];
+
+const PairCOne = [
+  {
+    id: "Alena",
+    alt: "Alena",
+    caption: "Alena on the Surface",
+    src: "/AOE_CHAR_Art/Alena_Regurgitate.png",
+  },
+];
+
+const PairCTwo = [
+  {
+    id: "Darius Portrait",
+    alt: "Darius Portrait",
+    caption: "Darius Portrait",
+    src: "/AOE_CHAR_Art/Darius_Portrait.png",
+  },
+];
+
+const SoloOne = [
+  {
+    id: "Divus Lautus Walkway With Figures",
+    alt: "Divus Lautus Walkway With Figures",
+    caption: "Divus Lautus Walkway With Figures",
+    src: "/AOE_BG_Art/DL_Figures.jpg",
+  },
+];
+
+const SoloTwo = [
+  {
+    id: "Bake Shop",
+    alt: "Bake Shop",
+    caption: "Bake Shop",
+    src: "/BG_Art/Bake_Shop.jpg",
+  },
+];
+
+const SoloThree = [
+  {
+    id: "Oacian Queen",
+    alt: "Oacian Queen",
+    caption: "Oacian Queen",
+    src: "/AOE_CHAR_Art/Merlina.png",
+  },
+];
 
 export default function Home() {
   return (
     <div className=" flex w-full h-full">
       <VerticalNav />
       <HorizontalNav />
-      <div className="w-screen h-fit mt-[9%] pb-12 ml-[25%] mr-[5%] flex items-center flex-col gap-y-6">
-        <SoloWideImage src={gazebo} alt="Gazebo-Background" />
-        <SoloWideImage src={sapyre} alt="Sapyre Smoking in Lava Pit" />
-        <SoloWideImage src={oacian_palace} alt="Oacian Palace" />
-        <SoloWideImage src={kellyn} alt="Kellyn" />
-        <SoloWideImage src={kellyn_night} alt="Kellyn at Night" />
-        <SoloWideImage src={valk_bg} alt="Valkirian City" />
-        <DuoImage
-          srcOne={varsyllus}
-          altOne="Varsyllus_Shepard_Daughter"
-          srcTwo={lightmage}
-          altTwo="Light_Mage_Spell_CC1"
+      <div className="w-screen h-fit pt-[9%] pb-12 ml-[30%] mr-[10%] flex  flex-col ">
+        <ImageGallery
+          imagesInfoArray={SoloColumn}
+          columnCount={1}
+          columnWidth={150}
+          gapSize={8}
+          customStyles={{ imageCaptionStyle: custStyle }}
         />
-        <SoloWideImage src={dl} alt="Divus Lautus Walkway With Figures" />
-        <DuoImage
-          srcOne={dutchess}
-          altOne="Dutchess_Outside"
-          srcTwo={queen}
-          altTwo="Valkirian Queen"
+        <div className="flex w-full gap-4">
+          <ImageGallery
+            imagesInfoArray={PairAOne}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={0}
+            customStyles={{
+              imageCaptionStyle: custStyle,
+              galleryContainerStyle: {
+                lineHeight: 2,
+                columns: 1,
+                columnWidth: 230,
+                textAlign: "center",
+                columnGap: 16,
+              },
+            }}
+          />
+          <ImageGallery
+            imagesInfoArray={PairATwo}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+        </div>
+        <ImageGallery
+          imagesInfoArray={SoloOne}
+          columnCount={1}
+          columnWidth={150}
+          gapSize={8}
+          customStyles={{ imageCaptionStyle: custStyle }}
         />
-        <SoloWideImage src={bakeshop} alt="Bake Shop" />
-        <DuoImage
-          srcOne={alina}
-          altOne="Alena_Regurgitate"
-          srcTwo={darius}
-          altTwo="Darius_Portrait"
+        <div className="flex w-full gap-4">
+          <ImageGallery
+            imagesInfoArray={PairBOne}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={0}
+            customStyles={{
+              imageCaptionStyle: custStyle,
+              galleryContainerStyle: {
+                lineHeight: 2,
+                columns: 1,
+                columnWidth: 230,
+                textAlign: "center",
+                columnGap: 16,
+              },
+            }}
+          />
+          <ImageGallery
+            imagesInfoArray={PairBTwo}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+        </div>
+
+        <ImageGallery
+          imagesInfoArray={SoloTwo}
+          columnCount={1}
+          columnWidth={150}
+          gapSize={8}
+          customStyles={{ imageCaptionStyle: custStyle }}
         />
-        <SoloWideImage src={merlina} alt="Merlina" />
+
+        <div className="flex w-full gap-4">
+          <ImageGallery
+            imagesInfoArray={PairCOne}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={0}
+            customStyles={{
+              imageCaptionStyle: custStyle,
+              galleryContainerStyle: {
+                lineHeight: 2,
+                columns: 1,
+                columnWidth: 230,
+                textAlign: "center",
+                columnGap: 16,
+              },
+            }}
+          />
+          <ImageGallery
+            imagesInfoArray={PairCTwo}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+        </div>
+
+        <ImageGallery
+          imagesInfoArray={SoloThree}
+          columnCount={1}
+          columnWidth={150}
+          gapSize={8}
+          customStyles={{ imageCaptionStyle: custStyle }}
+        />
       </div>
     </div>
   );

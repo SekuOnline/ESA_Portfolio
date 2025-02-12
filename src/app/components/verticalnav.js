@@ -138,7 +138,7 @@ function NavElement({ content }) {
 export function HorizontalNav() {
   return (
     <>
-      <div className="w-full h-[11%] gap-x-16 bg-white text-black flex font-titled absolute z-1 ">
+      <div className="w-full h-[11%] gap-x-16 bg-white text-black flex font-titled fixed z-10 ">
         {/* <h1 className="pl-[10%] w-fit text-5xl">Emma Sawyer</h1> */}
         <div className="w-full h-full ml-[20%] pl-[4%] pr-[5%] flex justify-between">
           <Link href="/" passHref legacyBehavior>
