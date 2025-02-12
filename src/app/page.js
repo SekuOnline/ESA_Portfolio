@@ -15,15 +15,17 @@ import kellyn from "../../public/AOE_CHAR_Art/Kellyn.png";
 import sapyre from "../../public/AOE_CHAR_Art/Sapyre_Smoking.png";
 import kellyn_night from "../../public/AOE_CHAR_Art/Kellyn_at_Night.png";
 import valk_bg from "../../public/AOE_BG_Art/Valkirian_City.jpg";
+import oacian_palace from "../../public/AOE_BG_Art/oacian_palace.png";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden flex w-screen h-screen">
+    <div className=" flex w-full h-full">
       <VerticalNav />
       <HorizontalNav />
       <div className="w-screen h-fit mt-[9%] pb-12 ml-[25%] mr-[5%] flex items-center flex-col gap-y-6">
         <SoloWideImage src={gazebo} alt="Gazebo-Background" />
         <SoloWideImage src={sapyre} alt="Sapyre Smoking in Lava Pit" />
+        <SoloWideImage src={oacian_palace} alt="Oacian Palace" />
         <SoloWideImage src={kellyn} alt="Kellyn" />
         <SoloWideImage src={kellyn_night} alt="Kellyn at Night" />
         <SoloWideImage src={valk_bg} alt="Valkirian City" />

@@ -9,6 +9,12 @@ import { ImageGallery } from "react-image-grid-gallery";
 
 const backgroundDesignArrayOne = [
   {
+    id: "BG0",
+    alt: "Background Design - Shroom Bathroom",
+    caption: "Shroom Bathroom",
+    src: "/BG_Art/Shroom-Bathroom.png",
+  },
+  {
     id: "BG1",
     alt: "Background Design - Radioactive Forest",
     caption: "Radioactive Forest",
