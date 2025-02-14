@@ -1,6 +1,6 @@
 "use client";
 import { ImageGallery } from "react-image-grid-gallery";
-import { VerticalNav, HorizontalNav } from "./components/verticalnav";
+import { VerticalNav, HorizontalNav, NavBars } from "./components/verticalnav";
 
 const custStyle = {
   opacity: 0,
@@ -140,118 +140,121 @@ const SoloThree = [
 
 export default function Home() {
   return (
-    <div className=" flex w-full h-full">
-      <VerticalNav />
-      <HorizontalNav />
-      <div className="w-screen h-fit pt-[9%] pb-12 ml-[30%] mr-[10%] flex  flex-col ">
-        <ImageGallery
-          imagesInfoArray={SoloColumn}
-          columnCount={1}
-          columnWidth={150}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
-        <div className="flex w-full gap-4">
+    <>
+      {/* <HorizontalNav />
+      <VerticalNav /> */}
+      <NavBars />
+      <div className=" flex w-full h-full justify-center">
+        <div className="h-fit max-w-[75%] pt-36 pb-12 flex flex-col ">
           <ImageGallery
-            imagesInfoArray={PairAOne}
+            imagesInfoArray={SoloColumn}
             columnCount={1}
             columnWidth={150}
-            gapSize={0}
-            customStyles={{
-              imageCaptionStyle: custStyle,
-              galleryContainerStyle: {
-                lineHeight: 2,
-                columns: 1,
-                columnWidth: 230,
-                textAlign: "center",
-                columnGap: 16,
-              },
-            }}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
           />
+          <div className="flex w-full gap-4">
+            <ImageGallery
+              imagesInfoArray={PairAOne}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={0}
+              customStyles={{
+                imageCaptionStyle: custStyle,
+                galleryContainerStyle: {
+                  lineHeight: 2,
+                  columns: 1,
+                  columnWidth: 230,
+                  textAlign: "center",
+                  columnGap: 16,
+                },
+              }}
+            />
+            <ImageGallery
+              imagesInfoArray={PairATwo}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={8}
+              customStyles={{ imageCaptionStyle: custStyle }}
+            />
+          </div>
           <ImageGallery
-            imagesInfoArray={PairATwo}
+            imagesInfoArray={SoloOne}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+          <div className="flex w-full gap-4">
+            <ImageGallery
+              imagesInfoArray={PairBOne}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={0}
+              customStyles={{
+                imageCaptionStyle: custStyle,
+                galleryContainerStyle: {
+                  lineHeight: 2,
+                  columns: 1,
+                  columnWidth: 230,
+                  textAlign: "center",
+                  columnGap: 16,
+                },
+              }}
+            />
+            <ImageGallery
+              imagesInfoArray={PairBTwo}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={8}
+              customStyles={{ imageCaptionStyle: custStyle }}
+            />
+          </div>
+
+          <ImageGallery
+            imagesInfoArray={SoloTwo}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+
+          <div className="flex w-full gap-4">
+            <ImageGallery
+              imagesInfoArray={PairCOne}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={0}
+              customStyles={{
+                imageCaptionStyle: custStyle,
+                galleryContainerStyle: {
+                  lineHeight: 2,
+                  columns: 1,
+                  columnWidth: 230,
+                  textAlign: "center",
+                  columnGap: 16,
+                },
+              }}
+            />
+            <ImageGallery
+              imagesInfoArray={PairCTwo}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={8}
+              customStyles={{ imageCaptionStyle: custStyle }}
+            />
+          </div>
+
+          <ImageGallery
+            imagesInfoArray={SoloThree}
             columnCount={1}
             columnWidth={150}
             gapSize={8}
             customStyles={{ imageCaptionStyle: custStyle }}
           />
         </div>
-        <ImageGallery
-          imagesInfoArray={SoloOne}
-          columnCount={1}
-          columnWidth={150}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
-        <div className="flex w-full gap-4">
-          <ImageGallery
-            imagesInfoArray={PairBOne}
-            columnCount={1}
-            columnWidth={150}
-            gapSize={0}
-            customStyles={{
-              imageCaptionStyle: custStyle,
-              galleryContainerStyle: {
-                lineHeight: 2,
-                columns: 1,
-                columnWidth: 230,
-                textAlign: "center",
-                columnGap: 16,
-              },
-            }}
-          />
-          <ImageGallery
-            imagesInfoArray={PairBTwo}
-            columnCount={1}
-            columnWidth={150}
-            gapSize={8}
-            customStyles={{ imageCaptionStyle: custStyle }}
-          />
-        </div>
-
-        <ImageGallery
-          imagesInfoArray={SoloTwo}
-          columnCount={1}
-          columnWidth={150}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
-
-        <div className="flex w-full gap-4">
-          <ImageGallery
-            imagesInfoArray={PairCOne}
-            columnCount={1}
-            columnWidth={150}
-            gapSize={0}
-            customStyles={{
-              imageCaptionStyle: custStyle,
-              galleryContainerStyle: {
-                lineHeight: 2,
-                columns: 1,
-                columnWidth: 230,
-                textAlign: "center",
-                columnGap: 16,
-              },
-            }}
-          />
-          <ImageGallery
-            imagesInfoArray={PairCTwo}
-            columnCount={1}
-            columnWidth={150}
-            gapSize={8}
-            customStyles={{ imageCaptionStyle: custStyle }}
-          />
-        </div>
-
-        <ImageGallery
-          imagesInfoArray={SoloThree}
-          columnCount={1}
-          columnWidth={150}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
       </div>
-    </div>
+    </>
   );
 }
 

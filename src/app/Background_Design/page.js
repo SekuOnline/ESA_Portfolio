@@ -119,7 +119,7 @@ export default function Home() {
       <VerticalNav />
       <HorizontalNav />
 
-      <div className="w-screen h-fit pt-[9%] pb-12 ml-[30%] mr-[10%] flex  flex-col ">
+      <div className=" h-fit pt-[9%] pb-12 ml-[30%]  flex  flex-col justify-center">
         <h1 className="text-4xl font-titled pb-4">Background Design</h1>
         <ImageGallery
           imagesInfoArray={backgroundDesignArrayOne}

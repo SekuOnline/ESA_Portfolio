@@ -18,6 +18,7 @@ module.exports = {
         },
         slideIn: {
           "100%": { transform: "translateX(-100%)" },
+          // "100%": { display: "none" },
         },
       },
       animation: {
