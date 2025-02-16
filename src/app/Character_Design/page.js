@@ -1,9 +1,5 @@
 "use client";
-import {
-  VerticalNav,
-  HorizontalNav,
-  //   SoloWideImage,
-} from "../components/verticalnav";
+import { NavBars } from "../components/verticalnav";
 
 import { ImageGallery } from "react-image-grid-gallery";
 
@@ -170,47 +166,47 @@ const custStyle = {
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden flex w-screen h-screen">
-      <VerticalNav />
-      <HorizontalNav />
-
-      <div className="w-screen h-fit pt-[9%] pb-12 ml-[25%] mr-[5%] flex  flex-col gap-4">
-        <h1 className="text-4xl font-titled">Character Design</h1>
-        <ImageGallery
-          imagesInfoArray={charDesignArrayTwo}
-          columnCount={2}
-          columnWidth={230}
-          gapSize={0}
-          customStyles={{
-            imageCaptionStyle: custStyle,
-            galleryContainerStyle: {
-              lineHeight: 2.5,
-              columns: 2,
-              columnWidth: 230,
-              textAlign: "center",
-              columnGap: 16,
-            },
-          }}
-        />
-        <div className="pt-16">
+    <>
+      <NavBars />
+      <div className="flex w-full h-screen max-lg:justify-evenly lg:flex-row-reverse max-lg:px-[10%] pl-[30%] pr-[10%]">
+        <div className="h-fit pt-36 pb-12 flex flex-col ">
+          <h1 className="text-4xl font-titled">Character Design</h1>
           <ImageGallery
-            imagesInfoArray={charDesignArrayOne}
-            columnCount={4}
+            imagesInfoArray={charDesignArrayTwo}
+            columnCount={2}
             columnWidth={230}
-            gapSize={8}
+            gapSize={0}
             customStyles={{
               imageCaptionStyle: custStyle,
               galleryContainerStyle: {
-                lineHeight: 2,
-                columns: 4,
+                lineHeight: 2.5,
+                columns: 2,
                 columnWidth: 230,
                 textAlign: "center",
                 columnGap: 16,
               },
             }}
           />
+          <div className="pt-16">
+            <ImageGallery
+              imagesInfoArray={charDesignArrayOne}
+              columnCount={4}
+              columnWidth={230}
+              gapSize={8}
+              customStyles={{
+                imageCaptionStyle: custStyle,
+                galleryContainerStyle: {
+                  lineHeight: 2,
+                  columns: 4,
+                  columnWidth: 230,
+                  textAlign: "center",
+                  columnGap: 16,
+                },
+              }}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

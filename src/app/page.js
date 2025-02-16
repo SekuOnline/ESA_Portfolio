@@ -141,10 +141,8 @@ const SoloThree = [
 export default function Home() {
   return (
     <>
-      {/* <HorizontalNav />
-      <VerticalNav /> */}
       <NavBars />
-      <div className=" flex w-full h-full justify-center">
+      <div className="flex w-full h-full justify-center">
         <div className="h-fit max-w-[75%] pt-36 pb-12 flex flex-col ">
           <ImageGallery
             imagesInfoArray={SoloColumn}

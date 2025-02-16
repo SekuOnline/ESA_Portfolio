@@ -58,10 +58,10 @@ export default function Home() {
   return (
     <>
       <NavBars />
-      <div className=" flex w-full h-screen justify-center">
-        <div className=" h-fit pt-48 pb-12 max-w-6xl flex flex-col gap-y-12">
+      <div className="flex w-full h-screen max-lg:justify-evenly lg:flex-row-reverse max-lg:px-[10%] pl-[30%] pr-[10%]">
+        <div className=" h-fit pt-36 pb-12  flex flex-col gap-y-4">
           <h1 className="text-4xl font-titled pb-4">About</h1>
-          <div className="flex flex-row-reverse h-auto justify-center flex-wrap-reverse">
+          <div className="flex h-auto justify-center ">
             <p className="font-regular pt-8 max-h-lg w-auto grow ">
               Emma Sawyer is a visual artist and animator from New Jersey
               working in and between the US/Canadian 2D Animation Industries,
@@ -94,7 +94,7 @@ export default function Home() {
             <img
               src="/MISC_ART/Postcard Mug-With BG.png"
               alt="2D art of hot cocoa in a mug, topped with marshmellows and a dipped-in candy-cane."
-              className="max-w-lg object-contain max-md:hidden"
+              className="max-w-lg object-contain max-xl:hidden"
             />
           </div>
           <form
@@ -146,19 +146,7 @@ export default function Home() {
               ></input>
             </div>
           </form>
-          {/* <div className="flex justify-evenly mt-16 flex-wrap">
-            <img src="/About-Logos/AS.jpg" className="min-w-28"></img>
-            <img src="/About-Logos/Titmouse.png" className="min-w-28"></img>
-            <img src="/About-Logos/Toonami.png" className="min-w-28"></img>
-          </div>
-          <div className="flex justify-evenly">
-            <img
-              src="/About-Logos/AGB.png"
-              className="/About-Logos/AS.jpg w-32"
-            ></img>
-            <img src="/About-Logos/LS.jpeg" className=" w-32"></img>
-            <img src="/About-Logos/studio.png" className=" w-32"></img> */}
-          {/* </div> */}
+
           <img src="/About-Logos/All_Logos.png" className="" />
         </div>
       </div>

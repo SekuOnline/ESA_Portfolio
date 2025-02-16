@@ -1,5 +1,5 @@
 "use client";
-import { VerticalNav, HorizontalNav } from "../components/verticalnav";
+import { NavBars } from "../components/verticalnav";
 import { ImageGallery } from "react-image-grid-gallery";
 
 const backgroundDesignArray = [
@@ -116,43 +116,46 @@ const custStyle = {
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden flex w-screen h-screen">
-      <VerticalNav />
-      <HorizontalNav />
-      <div className="w-screen h-fit mt-[9%] pb-12 ml-[25%] mr-[5%] flex  flex-col gap-y-4">
-        <h1 className="text-4xl font-titled text-gray-800">
-          Teenage Euthanasia
-        </h1>
-        <h3 className="text-lg font-titled text-gray-400">
-          Augenblick Studios
-        </h3>
-        <p className="font-regular">
-          Set in a mildly apocalyptic near-future, "Teenage Euthanasia" centers
-          around the Fantasy family and their inland Florida funeral home,
-          Tender Endings. The cast of characters includes recently reanimated
-          Trophy Fantasy, her teenage daughter, Euthanasia "Annie" Fantasy,
-          Annie's Uncle Pete and Annie's "old country" immigrant grandmother,
-          Baba.
-        </p>
-        <h2 className="pt-4 text-2xl font-titled text-gray-800">
-          Background Design
-        </h2>
-        <ImageGallery
-          imagesInfoArray={backgroundDesignArray}
-          columnCount={3}
-          columnWidth={230}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
-        <h2 className="pt-4 text-2xl font-titled text-gray-800">Prop Design</h2>
-        <ImageGallery
-          imagesInfoArray={propDesignArray}
-          columnCount={3}
-          columnWidth={230}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
+    <>
+      <NavBars />
+      <div className="flex w-full h-screen max-lg:justify-evenly lg:flex-row-reverse max-lg:px-[10%] pl-[30%] pr-[10%]">
+        <div className="h-fit  pt-36 pb-12 flex flex-col gap-y-4">
+          <h1 className="text-4xl font-titled text-gray-800">
+            Teenage Euthanasia
+          </h1>
+          <h3 className="text-lg font-titled text-gray-400">
+            Augenblick Studios
+          </h3>
+          <p className="font-regular">
+            Set in a mildly apocalyptic near-future, "Teenage Euthanasia"
+            centers around the Fantasy family and their inland Florida funeral
+            home, Tender Endings. The cast of characters includes recently
+            reanimated Trophy Fantasy, her teenage daughter, Euthanasia "Annie"
+            Fantasy, Annie's Uncle Pete and Annie's "old country" immigrant
+            grandmother, Baba.
+          </p>
+          <h2 className="pt-4 text-2xl font-titled text-gray-800">
+            Background Design
+          </h2>
+          <ImageGallery
+            imagesInfoArray={backgroundDesignArray}
+            columnCount={3}
+            columnWidth={230}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+          <h2 className="pt-4 text-2xl font-titled text-gray-800">
+            Prop Design
+          </h2>
+          <ImageGallery
+            imagesInfoArray={propDesignArray}
+            columnCount={3}
+            columnWidth={230}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

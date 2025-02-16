@@ -1,9 +1,5 @@
 "use client";
-import {
-  VerticalNav,
-  HorizontalNav,
-  //   SoloWideImage,
-} from "../components/verticalnav";
+import { NavBars } from "../components/verticalnav";
 
 import { ImageGallery } from "react-image-grid-gallery";
 
@@ -133,36 +129,36 @@ const custStyle = {
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden flex w-screen h-screen">
-      <VerticalNav />
-      <HorizontalNav />
-
-      <div className="w-screen h-fit pt-[9%] pb-12 ml-[25%] mr-[5%] flex  flex-col gap-y-4">
-        <h1 className="text-4xl font-titled">Prop Design</h1>
-        <ImageGallery
-          imagesInfoArray={propDesignArrayOne}
-          columnCount={2}
-          columnWidth={230}
-          gapSize={8}
-          customStyles={{
-            imageCaptionStyle: custStyle,
-            // imageContainerStyle: {
-            //   width: "200px",
-            //   height: "auto",
-            //   objectFit: "cover",
-            // },
-          }}
-        />
-        <div className="w-fit h-fit px-[7.5%]">
+    <>
+      <NavBars />
+      <div className="flex w-full h-screen max-lg:justify-evenly lg:flex-row-reverse max-lg:px-[10%] pl-[30%] pr-[10%]">
+        <div className="h-fit pt-36 pb-12 flex flex-col ">
+          <h1 className="text-4xl font-titled">Prop Design</h1>
           <ImageGallery
-            imagesInfoArray={propDesignArrayTwo}
-            columnCount={1}
+            imagesInfoArray={propDesignArrayOne}
+            columnCount={2}
             columnWidth={230}
             gapSize={8}
-            customStyles={{ imageCaptionStyle: custStyle }}
+            customStyles={{
+              imageCaptionStyle: custStyle,
+              // imageContainerStyle: {
+              //   width: "200px",
+              //   height: "auto",
+              //   objectFit: "cover",
+              // },
+            }}
           />
+          <div className="w-fit h-fit px-[7.5%]">
+            <ImageGallery
+              imagesInfoArray={propDesignArrayTwo}
+              columnCount={1}
+              columnWidth={230}
+              gapSize={8}
+              customStyles={{ imageCaptionStyle: custStyle }}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

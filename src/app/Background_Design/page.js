@@ -1,7 +1,6 @@
 "use client";
 import {
-  VerticalNav,
-  HorizontalNav,
+  NavBars,
   //   SoloWideImage,
 } from "../components/verticalnav";
 
@@ -115,60 +114,62 @@ const custStyle = {
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden flex w-screen h-screen">
-      <VerticalNav />
-      <HorizontalNav />
-
-      <div className=" h-fit pt-[9%] pb-12 ml-[30%]  flex  flex-col justify-center">
-        <h1 className="text-4xl font-titled pb-4">Background Design</h1>
-        <ImageGallery
-          imagesInfoArray={backgroundDesignArrayOne}
-          columnCount={1}
-          columnWidth={150}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
-
-        <div className="flex w-full gap-4">
+    <>
+      <NavBars />
+      <div className="flex w-full h-screen max-lg:justify-evenly lg:flex-row-reverse max-lg:px-[10%] pl-[30%] pr-[10%]">
+        <div className="h-fit w-full pt-36 pb-12 flex flex-col ">
+          <h1 className="max-sm:text-xl text-4xl font-titled pb-4">
+            Background Design
+          </h1>
           <ImageGallery
-            imagesInfoArray={backgroundDesignArrayTwo}
-            columnCount={1}
-            columnWidth={150}
-            gapSize={0}
-            customStyles={{
-              imageCaptionStyle: custStyle,
-              galleryContainerStyle: {
-                lineHeight: 2,
-                columns: 1,
-                columnWidth: 230,
-                textAlign: "center",
-                columnGap: 16,
-              },
-            }}
-          />
-          <ImageGallery
-            imagesInfoArray={backgroundDesignArrayThree}
+            imagesInfoArray={backgroundDesignArrayOne}
             columnCount={1}
             columnWidth={150}
             gapSize={8}
             customStyles={{ imageCaptionStyle: custStyle }}
           />
-        </div>
-        <ImageGallery
-          imagesInfoArray={backgroundDesignArrayFour}
-          columnCount={1}
-          columnWidth={150}
-          gapSize={8}
-          customStyles={{ imageCaptionStyle: custStyle }}
-        />
-        {/* <ImageGallery
+
+          <div className="flex w-full gap-4">
+            <ImageGallery
+              imagesInfoArray={backgroundDesignArrayTwo}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={0}
+              customStyles={{
+                imageCaptionStyle: custStyle,
+                galleryContainerStyle: {
+                  lineHeight: 2,
+                  columns: 1,
+                  columnWidth: 230,
+                  textAlign: "center",
+                  columnGap: 16,
+                },
+              }}
+            />
+            <ImageGallery
+              imagesInfoArray={backgroundDesignArrayThree}
+              columnCount={1}
+              columnWidth={150}
+              gapSize={8}
+              customStyles={{ imageCaptionStyle: custStyle }}
+            />
+          </div>
+          <ImageGallery
+            imagesInfoArray={backgroundDesignArrayFour}
+            columnCount={1}
+            columnWidth={150}
+            gapSize={8}
+            customStyles={{ imageCaptionStyle: custStyle }}
+          />
+          {/* <ImageGallery
           imagesInfoArray={proBGesignArrayTwo}
           columnCount={1}
           columnWidth={230}
           gapSize={8}
           customStyles={{ imageCaptionStyle: custStyle }}
         /> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
