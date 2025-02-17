@@ -142,8 +142,8 @@ export default function Home() {
   return (
     <>
       <NavBars />
-      <div className="flex w-full h-full justify-center">
-        <div className="h-fit max-w-[75%] pt-36 pb-12 flex flex-col ">
+      <div className="flex w-full h-screen max-lg:justify-evenly lg:flex-row-reverse max-lg:px-[10%] pl-[30%] pr-[10%]">
+        <div className="h-fit pt-36 pb-12 flex flex-col ">
           <ImageGallery
             imagesInfoArray={SoloColumn}
             columnCount={1}

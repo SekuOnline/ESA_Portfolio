@@ -1,7 +1,7 @@
 "use client";
 // import {useRouter} from 'next/router'
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import linkedin from "../../../public/SOCIAL_ICONS/Linkedin.png";
@@ -15,7 +15,13 @@ import instagram from "../../../public/SOCIAL_ICONS/Instagram.png";
 //Arrays containing the sub-sections of the vertical navbar and their respective links/slugs
 
 export function NavBars() {
-  const [activeNav, setActiveNav] = useState(window.innerWidth > 1024);
+  const [activeNav, setActiveNav] = useState(false);
+  React.useEffect(() => {
+    console.log(window.innerWidth);
+    if (window.innerWidth >= 1024) {
+      setActiveNav(true);
+    }
+  }, []);
 
   return (
     <>
