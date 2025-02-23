@@ -62,7 +62,7 @@ function VerticalNav({ isActive }) {
     <>
       {/* px-10 used on input button and first div to space div text and button evenly. */}
       <div
-        className={`bg-white  flex-col z-20  h-full max-w-32 px-20 max-lg:px-[10%] min-w-fit  text-black flex  shadow-xl space-y-1 py-36 gap-6 fixed  
+        className={`bg-white  flex-col z-20 max-md:w-screen h-full lg:px-12 xl:px-20 max-lg:px-[10%] min-w-fit  text-black flex  shadow-xl space-y-1 py-36 gap-6 fixed  
           ${!isActive && "hidden"} 
           `}
       >
@@ -88,7 +88,7 @@ function NavHeader({ title, contentArray }) {
   // console.log(contentArray);
   return (
     <div className="gap-6 flex flex-col">
-      <h1 className="text-EmmaPurple hover:text-EmmaLBlue text-4xl font-titled">
+      <h1 className="text-EmmaPurple hover:text-EmmaLBlue text-3xl font-titled">
         {title}
       </h1>
       <ul className="flex flex-col gap-1">
@@ -111,7 +111,7 @@ function NavElement({ content }) {
     <>
       {content.type === "Subheader" ? (
         <h2
-          className={`text-2xl text-gray-400 font-titled pb-2 ${
+          className={`text-xl text-gray-400 font-titled pb-2 ${
             content.padding === "Extra" && "pt-6"
           }`}
         >
@@ -120,7 +120,7 @@ function NavElement({ content }) {
       ) : (
         <li
           key={content.title}
-          className="text-lg text-black font-regular hover:text-EmmaHlPurple"
+          className="text-black font-regular hover:text-EmmaHlPurple"
         >
           <Link href={getContentLink(content)}>{content.title}</Link>
         </li>
@@ -132,7 +132,7 @@ function NavElement({ content }) {
 function HorizontalNav({ isActive, toggle }) {
   return (
     <>
-      <div className="w-full max-lg:px-[10%] max-lg:justify-evenly justify-between min-h-28 pr-[10%] pl-[30%]  flex z-50 max-lg:flex-col fixed items-center">
+      <div className="w-full max-lg:px-[10%] max-lg:justify-end max-lg:flex-row-reverse justify-between min-h-28 pr-[10%] pl-[30%] flex-row flex z-50  fixed items-center">
         {/* <h1 className="pl-[10%] w-fit text-5xl">Emma Sawyer</h1> */}
 
         {/* <input
@@ -166,15 +166,15 @@ function HorizontalNav({ isActive, toggle }) {
             </g>
           </svg>
         </Link>
-        <div className="flex flex-row max-lg:w-full justify-between ">
+        <div className="flex flex-row w-fit justify-between ">
           <input
             type="image"
             src={isActive ? "/X-Button.svg" : "/Hamburger.svg"}
             onClick={toggle}
-            className="z-50 fill-EmmaPurple w-8 h-8 lg:hidden "
+            className="z-50 fill-EmmaPurple w-8 h-8 lg:hidden mr-8"
           ></input>
 
-          <SocialButtons />
+          {/* <SocialButtons /> */}
         </div>
       </div>
       <div className="w-full bg-white h-28 max-lg:h-32 fixed z-10"></div>
@@ -184,32 +184,32 @@ function HorizontalNav({ isActive, toggle }) {
 
 function SocialButtons() {
   return (
-    <div className="flex min-w-40 justify-between flex-shrink items-center  z-50">
+    <div className="flex max-w-32 justify-between flex-shrink items-center z-50">
       <a
         href="https://cara.app/emmasawyerart"
         target="_blank"
-        className="w-8 h-8"
+        className="w-6 h-6"
       >
         <Image src={cara} alt="cara" />
       </a>
       <a
         href="https://www.linkedin.com/in/emma-v-sawyer/"
         target="_blank"
-        className="w-8 h-8"
+        className="w-6 h-6"
       >
         <Image src={linkedin} alt="linkedin" />
       </a>
       <a
         href="https://www.instagram.com/emmasawyerart/"
         target="_blank"
-        className="w-8 h-8"
+        className="w-6 h-6"
       >
         <Image src={instagram} alt="instagram" />
       </a>
       <a
         href="https://www.youtube.com/channel/UCtlkct7hX-HFnN7j07AVLUw"
         target="_blank"
-        className="w-8 h-8"
+        className="w-6 h-6"
       >
         <Image src={youtube} alt="youtube" />
       </a>
