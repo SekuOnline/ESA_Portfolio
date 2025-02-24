@@ -70,7 +70,7 @@ function VerticalNav({ isActive }) {
         <NavHeader title="PROJECTS" contentArray={projects} />
         <Link
           href="/About"
-          className="text-lg text-black pt-4 font-regular hover:text-EmmaHlPurple"
+          className=" text-black pt-4 font-regular hover:text-EmmaHlPurple"
         >
           About
         </Link>
@@ -148,7 +148,7 @@ function HorizontalNav({ isActive, toggle }) {
             data-name="Layer 2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 7767.26 806.83"
-            className="hover:fill-EmmaPurple lg:h-28 max-mg:h-20 z-50 max-w-96 "
+            className="hover:fill-EmmaPurple lg:h-28 max-mg:h-20 z-50 max-w-96 min-w-20"
           >
             <g id="Layer_1-2" data-name="Layer 1">
               <g>
