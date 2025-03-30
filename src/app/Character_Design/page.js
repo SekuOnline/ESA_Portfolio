@@ -205,7 +205,7 @@ export default function Home() {
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Alena-Front.png"
+              src="/AOE_CHAR_Art/CHARART2/Alena-front.png"
               className="mason-item"
             />
             <img
