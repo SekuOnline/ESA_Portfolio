@@ -189,7 +189,7 @@ export default function Home() {
           />
           <div className="h-fit w-full flex flex-wrap justify-evenly">
             <img
-              src="/AOE_CHAR_Art/CHARART2/Willa Design.jpg"
+              src="/AOE_CHAR_Art/CHARART2/Willa-Design.jpg"
               className="mason-item"
             />
             <img
@@ -197,23 +197,23 @@ export default function Home() {
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Light Mages.jpg"
+              src="/AOE_CHAR_Art/CHARART2/Light-Mages.jpg"
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Alena Combat.jpg"
+              src="/AOE_CHAR_Art/CHARART2/Alena-Combat.jpg"
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Alena Front.png"
+              src="/AOE_CHAR_Art/CHARART2/Alena-Front.png"
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Alena Back.jpg"
+              src="/AOE_CHAR_Art/CHARART2/Alena-Back.jpg"
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Alena Expressions.jpg"
+              src="/AOE_CHAR_Art/CHARART2/Alena-Expressions.jpg"
               className="mason-item"
             />
             <img
@@ -225,11 +225,11 @@ export default function Home() {
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Heathcliff Design.png"
+              src="/AOE_CHAR_Art/CHARART2/Heathcliff-Design.png"
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Heathcliff Expressions.jpg"
+              src="/AOE_CHAR_Art/CHARART2/Heathcliff-Expressions.jpg"
               className="mason-item"
             />
             <img
@@ -237,7 +237,7 @@ export default function Home() {
               className="mason-item"
             />
             <img
-              src="/AOE_CHAR_Art/CHARART2/Opal Turnaround.png"
+              src="/AOE_CHAR_Art/CHARART2/Opal-Turnaround.png"
               className="mason-item"
             />
           </div>
@@ -259,25 +259,6 @@ export default function Home() {
               }}
             />
           </div>
-
-          {/* <div className="list">
-            <img src="/AOE_CHAR_Art/CHARART2/Alena.jpg" className="list-item" />
-
-            <img src="/AOE_CHAR_Art/CHARART2/Navir.png" className="list-item" />
-
-            <img src="/AOE_CHAR_Art/CHARART2/Opal.png" className="list-item" />
-
-            <img src="/AOE_CHAR_Art/CHARART2/Willa.png" className="list-item" />
-            <img
-              src="/AOE_CHAR_Art/CHARART2/Heathcliff.png"
-              className="list-item"
-            />
-
-            <img
-              src="/AOE_CHAR_Art/CHARART2/Ingrid.png"
-              className="list-item"
-            />
-          </div> */}
         </div>
       </div>
     </>
